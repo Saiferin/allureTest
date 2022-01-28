@@ -16,14 +16,14 @@ import static io.qameta.allure.Allure.step;
 import static org.openqa.selenium.By.linkText;
 import static org.openqa.selenium.By.partialLinkText;
 
-public class issuesTest {
-    reportTest steps = new reportTest();
+@Owner("Saiferin")
+@Feature("Issues")
+@Story("Проверка вкладкуи Issues")
+@DisplayName("Проверка вкладку Issues")
+public class IssuesTest {
+    WebSteps steps = new WebSteps();
 
     @Test
-    @Owner("Saiferin")
-    @Feature("Issues")
-    @Story("Проверка вкладкуи Issues")
-    @DisplayName("Проверка вкладку Issues")
     public void listenerTest() {
         SelenideLogger.addListener("allure", new AllureSelenide());
 
@@ -38,9 +38,6 @@ public class issuesTest {
     }
 
     @Test
-    @Owner("Saiferin")
-    @Feature("Issues")
-    @Story("Проверка вкладку Issues")
     @DisplayName("Проверка  вкладки Issues с лямбдой")
     public void lamdaTest() {
 
@@ -68,9 +65,6 @@ public class issuesTest {
     }
 
     @Test
-    @Owner("Saiferin")
-    @Feature("Issues")
-    @Story("Проверка вкладку Issues")
     @DisplayName("Проверка наличия вкладки Issues с аннотациями")
     public void annotatedStepTest() {
         steps.openMainPage();
